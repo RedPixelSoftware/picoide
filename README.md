@@ -8,7 +8,7 @@ To use this script, you need to install compiler and text editor. (g++ and vim, 
 
 * How do i install it?
 
-To install PicoIDE, you need any c++ compiler to be installed. Google "g++ installation <YOUR LINUX DISTRO>" for help.
+To install PicoIDE, you need any c++ compiler to be installed. Google "c++ compiler installation <YOUR LINUX DISTRO>" for help.
 
 After that, download archive, and extract it into any folder.
 
