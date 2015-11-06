@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	float ver = 0.2;
-	int build = 141;
+	int build = 143;
 
 //	V A R I A B L E S
 
@@ -37,8 +37,8 @@ int main()
 	system("clear");
 	cout << "╞══ Developed for easy development in linux console. See goo.gl/Czp9Hs for some  " << endl;
 	cout << "╞══ details and documentation. Licensed under GNU GPL2. Uses some external tools." << endl;
-	cout << "╞══        PicoIDE " << ver << ":" << build << " (C) Red_Pixel Software 2015     " << endl;
-	cout << "╞════════════════════════════════════════════════════════════════════════════════"
+	cout << "╞══        PicoIDE " << ver << "/" << build << " (C) Red_Pixel Software 2015     " << endl;
+	cout << "╞════════════════════════════════════════════════════════════════════════════════" << endl;
 	cout << "╞══ Enter your project name: ";
 	cin >> project;
 	cout << " " << endl;

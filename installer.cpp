@@ -22,12 +22,13 @@ int main()
 	
     ver = 0.2;
 	system("clear");
-	cout << "╞══ PicoIDE Installer " << ver << " (C) Red_Pixel Software 2015 ══╡" << endl;
+	
+	cout << "╞══ Installer for PicoIDE " << ver << " (C) Red_Pixel Software 2015" << endl;
 	cout << "Welcome to PicoIDE installer! " << endl;
 	cout << "Compile PicoIDE? (1-Yes/0-No): ";
     cin >> inn;
     if(inn==1){
-        cout << "Type your compiler or its location and press Enter: ";
+        cout << "Type your C++ compiler or its location and press Enter: ";
         cin >> compiler;
         file = compiler + " do_not_rename_me.cpp -o picoide";
 	    com << file;
@@ -43,8 +44,10 @@ int main()
 	    cout << " " << endl;
  	    confB << editor + space;
 	    confB.close();
-	    cout << "Type your player or its location and press Enter: ";
+	    cout << " Type your player or its location and press Enter " << endl;
+	    cout << "If you want to disable this feature, type disable: ";
 	    cin >> player;
+	    if(player!="disable"){
 	    cout << " " << endl;
 	    cout << "Type your notificaton sound and press Enter: ";
 	    cin >> sound;
@@ -52,6 +55,11 @@ int main()
 	    confC << player + " -q " + sound;
 	    confC.close();
 	    system("chmod +x .notify");
+	    }else if(player=="disabled"){
+	    confC << " ";
+	    confC.close();
+	    system("chmod +x .notify");
+	    }
 	    if(ver==255){
 	    cout << "Create or use internal C++ structure file?(1-Create/0-Internal)" << endl;
 	    cin >> inn;
@@ -77,15 +85,20 @@ int main()
         cout << " " << endl;
         confB << editor + space;
 	confB.close();
-	cout << "Type your player or its location and press Enter: ";
-        cin >> player;
-        cout << " " << endl;
-        cout << "Type your notificaton sound and press Enter: ";
-        cin >> sound;
-        cout << " " << endl;
-        confC << player + " -q " + sound;
-	confC.close();
-	system("chmod +x .notify");
+	cout << "Type your player or its location and press Enter: " << endl;
+        cout << "If you want to disable this feature, type disable: ";
+	    cin >> player;
+	    if(player!="disable"){
+	    cin >> sound;
+	    cout << " " << endl;
+	    confC << player + " -q " + sound;
+	    confC.close();
+	    system("chmod +x .notify");
+	    }else if(player=="disabled"){
+	    confC << " ";
+	    confC.close();
+	    system("chmod +x .notify");
+	    }
 	cout << "That's all! Have a nice day <3" << endl;
 	    }	 
 }
